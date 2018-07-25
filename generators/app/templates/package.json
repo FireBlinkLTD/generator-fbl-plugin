@@ -1,10 +1,9 @@
 {
   "name": "<%- name %>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "tsoa": "tsoa",
     "tsc": "tsc",
     "rimraf": "rimraf",
     "depcheck": "yarn-check",
@@ -12,7 +11,7 @@
     "test": "nyc --reporter=html --reporter=text mocha",
     "build": "rimraf ./dist/ && tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
-    "prepublishOnly": "npm run build && npm run lint",
+    "prepublishOnly": "npm run build",
     "precommit": "npm run lint"
   },
   "author": "<%- author %>",
@@ -20,7 +19,7 @@
   "dependencies": {
     "chai-as-promised": "7.1.1",
     "colors": "1.3.1",
-    "fbl": "0.0.4",
+    "fbl": "0.0.5",
     "joi": "13.4.0",
     "reflect-metadata": "0.1.12",
     "typedi": "0.8.0"
