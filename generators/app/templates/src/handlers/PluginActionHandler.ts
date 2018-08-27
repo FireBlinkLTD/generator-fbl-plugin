@@ -1,26 +1,25 @@
 import {ActionHandler, ActionSnapshot, IHandlerMetadata} from 'fbl/dist/src/models';
 import * as Joi from 'joi';
 import {IContext} from 'fbl/dist/src/interfaces';
-import {Container} from 'typedi';
-import {FlowService} from 'fbl/dist/src/services';
+//import {Container} from 'typedi';
+//import {FlowService} from 'fbl/dist/src/services';
 
 export class PluginActionHandler extends ActionHandler {
     private static metadata = <IHandlerMetadata> {
         id: 'namespace.plugin-id',
         version: '1.0.0',
-        description: 'Give a short description about your action handler.',
         aliases: [
             // Register aliases for your action handler.
             // You can also override other plugins if you want to by specifying their id or alias in the list,
             // just be careful with the order of loading ;)
             'namespace.plugin-id-alias'
-        ],
-        // Optionally give few examples on how your action handler can be configured.
-        // Use YAML format for your strings.
-        examples: [],
+        ]
 
         // If you want to manually process EJS template inside your options uncomment the following line
         // skipTemplateProcessing: true,
+
+        // If entire options set contains sensitive information - uncomment following line to mask in in report.
+        // considerOptionsAsSecrets: true,
     };
 
     private static validationSchema = Joi.object()
