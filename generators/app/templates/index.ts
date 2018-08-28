@@ -1,14 +1,27 @@
 import {IPlugin} from "fbl/dist/src/interfaces";
-import {ActionHandler} from "fbl/dist/src/models";
 import {PluginActionHandler} from "./src/handlers";
 
-class ContextPlugin implements IPlugin {
-    getActionHandlers(): ActionHandler[] {
-        return [
-            // Register all your action handlers below
-            new PluginActionHandler(),
-        ];
-    }
-}
+const packageJson = require('../package.json');
 
-module.exports = new ContextPlugin();
+module.exports = <IPlugin> {
+  name: 'Plugin Name',
+
+  description: `Plugin human readable description.`,
+
+  tags: [],
+
+  version: packageJson.version,
+
+  requires: {
+    fbl: '~0.1.0',
+    plugins: {
+      //pluginId: '<0.0.1'
+    }
+  },
+
+  reporters: [],
+
+  actionHandlers: [
+    new PluginActionHandler()
+  ]
+};

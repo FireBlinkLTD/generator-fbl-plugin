@@ -1,11 +1,11 @@
-import {ActionHandler, ActionSnapshot, IHandlerMetadata} from 'fbl/dist/src/models';
+import {ActionHandler, ActionSnapshot} from 'fbl/dist/src/models';
 import * as Joi from 'joi';
-import {IContext} from 'fbl/dist/src/interfaces';
+import {IContext, IActionHandlerMetadata} from 'fbl/dist/src/interfaces';
 //import {Container} from 'typedi';
 //import {FlowService} from 'fbl/dist/src/services';
 
 export class PluginActionHandler extends ActionHandler {
-    private static metadata = <IHandlerMetadata> {
+    private static metadata = <IActionHandlerMetadata> {
         id: 'namespace.plugin-id',
         version: '1.0.0',
         aliases: [
@@ -27,7 +27,7 @@ export class PluginActionHandler extends ActionHandler {
         .required()
         .options({abortEarly: true});
 
-    getMetadata(): IHandlerMetadata {
+    getMetadata(): IActionHandlerMetadata {
         return PluginActionHandler.metadata;
     }
 

@@ -57,6 +57,6 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.yarnInstall();
+    this.yarnInstall([], { 'dev': true });
   }
 };
