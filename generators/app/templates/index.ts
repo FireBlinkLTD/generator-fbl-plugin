@@ -13,7 +13,7 @@ module.exports = <IPlugin> {
   version: packageJson.version,
 
   requires: {
-    fbl: '~0.1.0',
+    fbl: '~0.1.2',
     plugins: {
       //pluginId: '<0.0.1'
     }
