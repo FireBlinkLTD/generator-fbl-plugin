@@ -1,6 +1,6 @@
 {
   "name": "generator-fbl-plugin",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "FireBlink Logistics plugin project template.",
   "homepage": "https://github.com/FireBlinkLTD/generator-fbl-plugin",
   "author": {
@@ -13,6 +13,7 @@
   ],
   "main": "generators/index.js",
   "keywords": [
+    "fireblink",
     "fbl",
     "deployment",
     "automation",
