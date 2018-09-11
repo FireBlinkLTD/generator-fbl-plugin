@@ -1,7 +1,9 @@
 # generator-fbl-plugin
-> FireBlink Logistic's plugin project generator.
 
-Note: generated project will have a default MIT license. 
+[![Greenkeeper badge](https://badges.greenkeeper.io/FireBlinkLTD/generator-fbl-plugin.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/FireBlinkLTD/generator-fbl-plugin.svg?style=svg)](https://circleci.com/gh/FireBlinkLTD/generator-fbl-plugin)
+
+FireBlink Logistic's plugin project generator.
 
 ## Installation
 
